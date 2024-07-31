@@ -375,7 +375,7 @@ strong {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 0; /* Adjust the padding as needed */
+  padding: 20px 0;
   background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
   backdrop-filter: blur(10px); /* Apply the blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
@@ -417,7 +417,7 @@ strong {
   color: var(--primary-color);
   font-size: var(--h5-font-size);
   font-weight: var(--font-weight-bold);
-  padding: 0;
+  padding: 0 0;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -514,9 +514,16 @@ strong {
   top: 8px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767.98px) { /* Adjust the breakpoint as needed */
   .navbar-brand {
-    margin: 0 -300px;
+    display: inline-block;
+    padding: 0;
+    margin: 0 0px; /* Center the logo if needed */
+  }
+  
+  .navbar-brand img {
+    width: 43px; 
+    height: auto;
   }
 }
 
@@ -534,7 +541,6 @@ html {
 .section.in-view {
   transform: scale(1.05);
 }
-
 
 
 
