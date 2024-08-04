@@ -256,11 +256,11 @@ svg text {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   #preloader svg {
-      width: 80%; /* Slightly larger for tablets */
+      width: 100%; /* Slightly larger for tablets */
   }
 
   svg text {
-      font-size: 17vw; /* Adjust for tablets and smaller screens */
+      font-size: 19vw; /* Adjust for tablets and smaller screens */
   }
 }
 
