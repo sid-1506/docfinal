@@ -189,8 +189,10 @@ strong {
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 
 /* General body styles */
-#preloader{
+#preloader {
     background: #e3f2fd;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out; /* Smooth transition for opacity and visibility */
+    visibility: visible; /* Make sure it is visible initially */
 }
 
 /* Preloader styles */
@@ -205,15 +207,24 @@ strong {
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Make sure it's on top */
+    opacity: 1; /* Ensure it's visible initially */
+    visibility: visible; /* Ensure it's visible initially */
 }
 
+/* Preloader hide styles */
+.loaded #preloader {
+    opacity: 0; /* Fade out */
+    visibility: hidden; /* Hide after fading out */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* SVG styling */
 #preloader svg {
     width: 100%; /* Adjust size as needed */
     height: 100%;
     font-family: 'Russo One', sans-serif;
 }
 
-/* SVG styling */
 svg {
     font-family: 'Russo One', sans-serif;
     position: absolute; 
@@ -242,10 +253,7 @@ svg text {
     }
 }
 
-/* Hide preloader once page is loaded */
-.loaded #preloader {
-    display: none;
-}
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
   #preloader svg {
       width: 80%; /* Slightly larger for tablets */
@@ -265,7 +273,6 @@ svg text {
       font-size: 19vw; /* Adjust for very small screens */
   }
 }
-
 
 
 /*---------------------------------------
